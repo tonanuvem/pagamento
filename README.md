@@ -10,10 +10,12 @@ Esse projeto ilustra o uso do padrão Factory Method.
 2.1 ) Executar na própria máquina: 
 > ./mvnw spring-boot:run
 
-2.2) Criar a imagem: 
+2.2) Executar em Docker
+
+a) Criar a imagem: 
 > docker build -t pagamentoimg .
 
-Rodar aplicação em conteiner: 
+b) Rodar aplicação em conteiner: 
 > docker run --name pagamento -p 8080:8080 -d pagamentoimg
 
 3) Exemplo de chamada no navegador:
