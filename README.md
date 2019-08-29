@@ -8,7 +8,12 @@ Esse projeto ilustra o uso do padrão Factory Method.
 > git clone
 
 2.1 ) Executar na própria máquina: 
+
+a) Linux ou Mac
 > ./mvnw spring-boot:run
+
+b) Windows
+> mvnw.cmd spring-boot:run
 
 2.2) Executar em Docker
 
