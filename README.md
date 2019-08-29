@@ -4,18 +4,23 @@ Esse projeto ilustra o uso do padrão Factory Method.
 
 ### Exemplo para rodar em Docker
 
-Baixar o projeto: 
+1) Baixar o projeto: 
 > git clone
 
-Executar na própria máquina: 
+2.1 ) Executar na própria máquina: 
 > ./mvnw spring-boot:run
 
-Criar a imagem: 
+2.2) Criar a imagem: 
 > docker build -t pagamentoimg .
 
 Rodar aplicação em conteiner: 
 > docker run --name pagamento -p 8080:8080 -d pagamentoimg
 
+3) Exemplo de chamada no navegador:
+> http://localhost:8080/pagamento?tipo_pagamento=DINHEIRO&valor_pagamento=500
+> http://localhost:8080/pagamento?tipo_pagamento=CHEQUE&valor_pagamento=500
+> http://localhost:8080/pagamento?tipo_pagamento=DINHEIRO&valor_pagamento=500
+    
 ### References
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
