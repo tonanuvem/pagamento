@@ -7,7 +7,7 @@ abstract class Pagamento implements PagamentoAPI {
     protected int valorPagamento;
 
     @Override
-    abstract public Pagamento processarPagamento(int valor);
+    public abstract Pagamento processarPagamento(int valor);
 
     static Pagamento factoryPagamento(long contador, TipoPagamento tipoPagamento, int valor) {
         // Definir qual o tipo de Pagamento
