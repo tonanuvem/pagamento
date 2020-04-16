@@ -1,7 +1,7 @@
 Definição do JSON para criar um projeto: 
 https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html
 
-Definição do JSON da especificação do Build:
+Definição do JSON da especificação do Build:https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#reports-buildspec-file
 
 Definição do Pipeline com múltiplas entradas / saídas:
 
