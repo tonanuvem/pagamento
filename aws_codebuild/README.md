@@ -1,5 +1,4 @@
 Definição do JSON para criar um projeto: 
-
 https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html
 
 Definição do JSON da especificação do Build:
@@ -10,7 +9,6 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/sample-pipeline-multi-inp
 https://docs.aws.amazon.com/codebuild/latest/userguide/sample-multi-in-out.html
 
 Exemplo Java com Elastic Beanstalk:
-
 https://docs.aws.amazon.com/codebuild/latest/userguide/sample-elastic-beanstalk.html
 
 Exemplos do Docker:
@@ -23,5 +21,4 @@ Custom Image Docker:
 https://docs.aws.amazon.com/codebuild/latest/userguide/sample-docker-custom-image.html
 
 Exemplo de teste Report:
-
 https://docs.aws.amazon.com/codebuild/latest/userguide/sample-test-report-cli.html
