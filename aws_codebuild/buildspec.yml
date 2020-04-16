@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk11
+  build:
+    commands:
+      - cd $CODEBUILD_SRC_DIR_source1
+      - touch file1
+      - cd $CODEBUILD_SRC_DIR_source2
+      - touch file2
+
+artifacts:
+  secondary-artifacts:
+    artifact1:
+      base-directory: $CODEBUILD_SRC_DIR_source1
+      files:
+        - file1
+    artifact2:
+      base-directory: $CODEBUILD_SRC_DIR_source2
+      files:
+        - file2
