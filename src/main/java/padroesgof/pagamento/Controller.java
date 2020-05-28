@@ -24,6 +24,6 @@ public class Controller {
 
     @RequestMapping("/")
     public String index() {
-        return "Microserviço de Pagamento!";
+        return "Microservice de Pagamento!";
     }
 }
