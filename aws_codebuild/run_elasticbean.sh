@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/enviroment
+cd ~/environment
 DIR="$PWD/pagamento"
 if [ -d "$DIR" ]; then
   rm -rf pagamento
@@ -12,10 +12,11 @@ git clone https://github.com/tonanuvem/pagamento.git
 git clone https://github.com/tonanuvem/pagamento-bdd.git
 cd pagamento/aws_codebuild
 sh codecommit.sh
+echo "" & echo ""
 sh config_credenciais.sh
 sh elasticbean_role.sh
 
-cd ~/enviroment/pagamento
+cd ~/environment/pagamento
 
 echo "Digite seu Primeiro Nome:" && read NOME
 echo "Digite seu Ultimo Sobrenome:" && read SOBRENOME
