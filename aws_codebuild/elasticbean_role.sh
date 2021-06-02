@@ -1,5 +1,5 @@
 # https://docs.aws.amazon.com/pt_br/elasticbeanstalk/latest/dg/iam-servicerole.html
-sh config_credenciais.sh
+#sh config_credenciais.sh
 
 echo ""
 echo " Configurando ..."
