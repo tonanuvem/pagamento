@@ -28,6 +28,7 @@ aws elasticbeanstalk check-dns-availability --cname-prefix $NOME$SOBRENOME
 
 # configurando repositorio codecommit
 sh codecommit.sh
+cd .. && eb init
 
 # configurando elasticbeanstalk
 eb create pagamento-env --service-role elasticbeanFiapRole -c $NOME$SOBRENOME
