@@ -1,5 +1,6 @@
 # https://docs.aws.amazon.com/pt_br/elasticbeanstalk/latest/dg/iam-servicerole.html
 sh config_credenciais.sh
+
 echo ""
 echo " Configurando ..."
 docker run -ti --rm --name awscli -v $PWD/files/:/root/.aws -v $PWD/iam/:/fiap --entrypoint /bin/sh -d tonanuvem/kubectl-aws-cli
@@ -25,6 +26,10 @@ echo "Digite seu Ultimo Sobrenome:" && read SOBRENOME
 
 aws elasticbeanstalk check-dns-availability --cname-prefix $NOME$SOBRENOME
 
+# configurando codebuild
+mvn -q package && sh codecommit.sh
+
+# configurando elasticbeanstalk
 eb create pagamento-env --service-role elasticbeanFiapRole -c $NOME$SOBRENOME
 
 
