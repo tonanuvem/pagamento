@@ -18,10 +18,11 @@ docker exec -ti awscli aws iam attach-role-policy --policy-arn arn:aws:iam::aws:
 docker exec -ti awscli aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier --role-name aws-elasticbeanstalk-ec2-role
 
 
-# antes de iniciar, deve ser criada pela console a função "eksFiapClusterRole" e inserir as políticas "AWSElasticBeanstalkWebTier" "AWSElasticBeanstalkMulticontainerDocker" "AWSElasticBeanstalkWorkerTier"
-#docker exec -ti awscli aws iam create-role --role-name elasticbeanFiapRole --assume-role-policy-document file://elasticbeanRole.json
-#docker exec -ti awscli aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier --role-name elasticbeanFiapRole
-#docker exec -ti awscli aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker --role-name elasticbeanFiapRole
+# criar role aws-elasticbeanstalk-service-role
+docker exec -ti awscli aws iam create-role --role-name elasticbeanFiapSvcRole --assume-role-policy-document file://elasticbeanRole.json
+docker exec -ti awscli aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSElasticBeanstalkEnhancedHealth --role-name elasticbeanFiapSvcRole
+docker exec -ti awscli aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSElasticBeanstalkManagedUpdatesCustomerRolePolicy --role-name elasticbeanFiapSvcRole
+
 #docker exec -ti awscli aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier --role-name elasticbeanFiapRole
 #docker exec -ti awscli aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSElasticBeanstalkEnhancedHealth --role-name elasticbeanFiapRole
 #docker exec -ti awscli aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AWSElasticBeanstalkManagedUpdatesCustomerRolePolicy --role-name elasticbeanFiapRole
