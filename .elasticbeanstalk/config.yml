@@ -9,7 +9,7 @@ environment-defaults:
 global:
   application_name: pagamento
   branch: master
-  default_ec2_keyname: null
+  default_ec2_keyname: chave-fiap
   default_platform: Docker running on 64bit Amazon Linux
   default_region: us-east-1
   include_git_submodules: true
@@ -20,3 +20,5 @@ global:
   repository: pagamento
   sc: git
   workspace_type: Application
+  
+  
