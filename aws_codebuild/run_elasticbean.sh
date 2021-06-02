@@ -1,13 +1,13 @@
 #!/bin/bash
 cd ~/environment
 DIR="$PWD/pagamento"
-if [ -d "$DIR" ]; then
+#if [ -d "$DIR" ]; then
   rm -rf pagamento
-fi
+#fi
 DIRBDD="$PWD/pagamento-bdd"
-if [ -d "$DIR" ]; then
+#if [ -d "$DIR" ]; then
   rm -rf pagamento-bdd
-fi
+#fi
 git clone https://github.com/tonanuvem/pagamento.git
 git clone https://github.com/tonanuvem/pagamento-bdd.git
 cd pagamento/aws_codebuild
