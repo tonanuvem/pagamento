@@ -26,8 +26,8 @@ echo "Digite seu Ultimo Sobrenome:" && read SOBRENOME
 
 aws elasticbeanstalk check-dns-availability --cname-prefix $NOME$SOBRENOME
 
-# configurando codebuild
-mvn -q package && sh codecommit.sh
+# configurando repositorio codecommit
+sh codecommit.sh
 
 # configurando elasticbeanstalk
 eb create pagamento-env --service-role elasticbeanFiapRole -c $NOME$SOBRENOME
