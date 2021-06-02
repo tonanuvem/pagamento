@@ -21,17 +21,18 @@ docker exec -ti awscli aws iam attach-role-policy --policy-arn arn:aws:iam::aws:
 
 #aws iam get-role --role-name elasticbeanFiapRole
 
-echo "Digite seu Primeiro Nome:" && read NOME
-echo "Digite seu Ultimo Sobrenome:" && read SOBRENOME
+#echo "Digite seu Primeiro Nome:" && read NOME
+#echo "Digite seu Ultimo Sobrenome:" && read SOBRENOME
 
-aws elasticbeanstalk check-dns-availability --cname-prefix $NOME$SOBRENOME
+#aws elasticbeanstalk check-dns-availability --cname-prefix $NOME$SOBRENOME
 
 # configurando repositorio codecommit
-sh codecommit.sh
-cd .. && eb init
+
+#sh codecommit.sh
+#cd .. && eb init
 
 # configurando elasticbeanstalk
-eb create pagamento-env --service-role elasticbeanFiapRole -c $NOME$SOBRENOME
+#eb create pagamento-env --service-role elasticbeanFiapRole -c $NOME$SOBRENOME
 
 
 #docker exec -ti awscli /bin/sh 
