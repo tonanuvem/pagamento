@@ -24,4 +24,5 @@ echo "Digite seu Ultimo Sobrenome:" && read SOBRENOME
 aws elasticbeanstalk check-dns-availability --cname-prefix $NOME$SOBRENOME
 
 # configurando elasticbeanstalk
+eb init
 eb create pagamento-env -c $NOME$SOBRENOME
