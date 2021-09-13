@@ -9,11 +9,11 @@ environment-defaults:
 global:
   application_name: pagamento
   branch: master
-  default_ec2_keyname: chave-fiap
+  default_ec2_keyname: null
   default_platform: Docker running on 64bit Amazon Linux
   default_region: us-east-1
   include_git_submodules: true
-  instance_profile: null
+  instance_profile: LabInstanceProfile
   platform_name: null
   platform_version: null
   profile: null
