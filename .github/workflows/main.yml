@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
 
-  build:
+  login:
     runs-on: ubuntu-latest
     
     steps:
@@ -26,6 +26,10 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
       - name: Set up Docker Buildx
         id: buildx
         uses: docker/setup-buildx-action@v1
