@@ -33,6 +33,6 @@ public class DemoPagamentoTests {
 		this.mockMvc.perform(post("/pagamento?tipo_pagamento=CHEQUE&valor_pagamento=1000")).andDo(print()).andExpect(status().isOk())
 				.andExpect(content().string(containsString("não autorizado")));
 		this.mockMvc.perform(post("/pagamento?tipo_pagamento=CHEQUE&valor_pagamento=100")).andDo(print()).andExpect(status().isOk())
-				.andExpect(content().string(containsString("não autorizado")));
+				.andExpect(content().string(containsString("sucesso")));
 	}
 }
